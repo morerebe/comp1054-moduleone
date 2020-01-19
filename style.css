@@ -1,0 +1,98 @@
+#css-zen-garden { /*associating attributes to the whole body ~ id selector*/
+  display: flex;
+  margin: 0px;
+  padding: 0;
+  background: transparent;
+}
+
+.intro > header {
+  width: 100%;
+  margin: 0px;
+  background-color: #a9d0d2;
+  padding: 8px;
+  position: sticky; /*position to make header fixed as user scrolls*/
+  display: block;
+  z-index: 99999; /*sticky position top layer of stack*/
+  opacity: 1;
+  top: 0;
+  left: 0;
+}
+
+header > h1, h2 {
+  font-family: "Baskervville", serif;
+  font-size: 24px;
+  color: #52afb5;
+  display: inline;
+}
+
+abbr {
+	text-decoration: none; /*eliminates the underline detail on <abbr>*/
+}
+
+p { /*all copy within p tags ~ type selector*/
+  margin-left: 100px;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  text-align: justify;
+  width: 50%;
+  position: relative;
+}
+
+.intro h3 {
+  font-family: "Baskervville", serif;
+  margin-left: 50px;
+  color: #565656;
+}
+
+#zen-supporting h3 {
+  font-family: "Baskervville", serif;
+  margin-left: 50px;
+  color: #565656;
+}
+
+.summary, p:nth-child(1) + p:nth-child(2){ /*the first and second p tag ~  a pseudo-class selector AND  direct sibling
+combinator*/
+  font-style: italic;
+}
+a:link {
+	font-weight: bold;
+	color: #52afb5;
+}
+
+a:hover, a:active {  /*targeting the hover over links*/
+  text-decoration: underline; /*elimates the hyperlink underline*/
+  color: #565656;
+}
+
+.sidebar {  /* moving the aside to the top right ~ class selector*/
+  width: 30%;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+	margin-left: 600px;
+  position: fixed;
+	top: 150px;
+  right: 0;
+	float: right;
+}
+
+aside ~ h3 { /*all h3 headers of the aside ~ general sibling*/
+  font-family: "Roboto", sans-serif;
+  margin-left: 0px;
+}
+
+nav li { /*targets all list items that are descendants of nav tags ~ descendant combinator*/
+  font-size: 14px;
+  line-height: 2;
+  color: #565656;
+}
+
+footer {
+  background-color: #a9d0d2;
+  display: flex;
+}
+
+footer > a[href]{ /*removing link underlines from all a tags in the footer ~ attribute selector*/
+  padding: 8px;
+  text-decoration: none;
+  flex-grow: 1;
+}
